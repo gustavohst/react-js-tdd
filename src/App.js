@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <h1> This is counter app </h1>
       <div id="counter-value">{counter}</div>
-      <button id="increment-btn">Increment</button>
+      <button id="increment-btn" onClick={() => setCounter(counter + 1)}>Increment</button>
     </div>
   );
 }
