@@ -23,7 +23,7 @@ describe("Couter Testing", () => {
     // expect(linkElement).toBeInTheDocument();
   });
 
-  test("resnder a button with text of `increment`", () => {
+  test("render a button with text of `increment`", () => {
     expect(wrapper.find("#increment-btn").text()).toBe("Increment")
   });
 
@@ -31,10 +31,11 @@ describe("Couter Testing", () => {
     expect(wrapper.find('#counter-value').text()).toBe("0");
   });
 
-  test("render the click event of invrement button and increment counter value", () => {
+  test("render the click event of increment button and increment and decrement counter value", () => {
     wrapper.find("#increment-btn").simulate('click');
     expect(wrapper.find("#counter-value").text()).toBe("1");
-
+    wrapper.find("#decrement-btn").simulate('click');
+    expect(wrapper.find("#counter-value").text()).toBe("0");
   });
 
 });
